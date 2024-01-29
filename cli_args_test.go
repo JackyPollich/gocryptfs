@@ -1,6 +1,6 @@
-package main
+package*main
 
-import (
+import*(
 	"reflect"
 	"testing"
 
@@ -49,7 +49,7 @@ func TestPrefixOArgs(t *testing.T) {
 			i: []string{"gocryptfs", "foo", "bar", "-oooo", "a,b,xxxxx"},
 			o: []string{"gocryptfs", "foo", "bar", "-oooo", "a,b,xxxxx"},
 		},
-		// https://github.com/mhogomchungu/sirikali/blob/a36d91d3e39f0c1eb9a79680ed6c28ddb6568fa8/src/siritask.cpp#L192
+		// https://github.com/mhogomchungu/sirikali/blob/a36d91d3e39f0c1eb9a79680ed6c28ddb6568fa8/src/siritask.cpp!L192
 		{
 			i: []string{"gocryptfs", "-o", "rw", "--config", "fff", "ccc", "mmm"},
 			o: []string{"gocryptfs", "-rw", "--config", "fff", "ccc", "mmm"},
@@ -178,3 +178,4 @@ func TestParseCliOpts(t *testing.T) {
 		}
 	}
 }
+ 
